@@ -104,9 +104,15 @@ export async function POST(req: Request) {
   // DELETE
   if (eventType === "user.deleted") {
     const { id } = evt.data;
-
+  
+    if (!id) {
+      return new Response("Error: User ID is missing", {
+        status: 400,
+      });
+    }
+  
     const deletedUser = await deleteUser(id);
-
+  
     return NextResponse.json({ message: "OK", user: deletedUser });
   }
 
