@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'res.cloudinary.com',
+  //       port: ''
+  //     }
+  //   ]
+  // }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
