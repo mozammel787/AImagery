@@ -17,10 +17,10 @@ export async function POST(req: Request) {
     }
 
     // Get the headers
-    const headerPayload = headers(); // No `await` here
-    const svix_id = headerPayload.get("svix-id");
-    const svix_timestamp = headerPayload.get("svix-timestamp");
-    const svix_signature = headerPayload.get("svix-signature");
+   const headerPayload = await headers(); // Ensure this is awaited
+  const svix_id = headerPayload.get("svix-id");
+  const svix_timestamp = headerPayload.get("svix-timestamp");
+  const svix_signature = headerPayload.get("svix-signature");
 
     // If there are no headers, error out
     if (!svix_id || !svix_timestamp || !svix_signature) {
@@ -62,13 +62,12 @@ export async function POST(req: Request) {
 
         const user = {
             clerkId: id,
-            email: email_addresses[0].email_address,
-            username: username!,
-            firstName: first_name,
-            lastName: last_name,
-            photo: image_url,
-        };
-
+            email: email_addresses[0]?.email_address,
+            username: username ?? "",
+            firstName: first_name ?? "",
+            lastName: last_name ?? "",
+            photo: image_url ?? "",
+          };
         const newUser = await createUser(user);
 
         // Set public metadata
@@ -88,11 +87,11 @@ export async function POST(req: Request) {
         const { id, image_url, first_name, last_name, username } = evt.data;
 
         const user = {
-            firstName: first_name,
-            lastName: last_name,
-            username: username!,
-            photo: image_url,
-        };
+            firstName: first_name ?? "",
+            lastName: last_name ?? "",
+            username: username ?? "",
+            photo: image_url ?? "",
+          };
 
         const updatedUser = await updateUser(id, user);
 
