@@ -1,5 +1,9 @@
 import React from 'react';
 
+export async function generateStaticParams() {
+    return [{ id: [] }];
+  }
+
 const TransformationsPage = () => {
     return (
         <div>
@@ -9,3 +13,5 @@ const TransformationsPage = () => {
 };
 
 export default TransformationsPage;
+
+  

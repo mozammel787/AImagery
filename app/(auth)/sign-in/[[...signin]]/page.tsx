@@ -1,10 +1,10 @@
 import { SignIn } from '@clerk/nextjs';
 import React from 'react';
 
-const SignInPage = () => {
-    return (
-        <SignIn />
-    );
-};
+export async function generateStaticParams() {
+    return [{ signIn: [] }];
+}
 
-export default SignInPage;
+export default function SignUpPage() {
+    return <SignIn />;
+}
