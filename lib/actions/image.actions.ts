@@ -18,6 +18,7 @@ const populateUser = (query: any) => query.populate({
 // ADD IMAGE
 export async function addImage({ image, userId, path }: AddImageParams) {
   try {
+
     await connectToDatabase();
 
     const author = await User.findById(userId);
@@ -25,14 +26,15 @@ export async function addImage({ image, userId, path }: AddImageParams) {
     if (!author) {
       throw new Error("User not found");
     }
-
-    const newImage = await Image.create({
+    const ImageInfo = {
       ...image,
       author: author._id,
-    })
-
+    }
+    
+    const newImage = await Image.create(ImageInfo)
+    
     revalidatePath(path);
-
+    
     return JSON.parse(JSON.stringify(newImage));
   } catch (error) {
     handleError(error)
@@ -72,7 +74,7 @@ export async function deleteImage(imageId: string) {
     await Image.findByIdAndDelete(imageId);
   } catch (error) {
     handleError(error)
-  } finally{
+  } finally {
     redirect('/')
   }
 }
@@ -84,7 +86,7 @@ export async function getImageById(imageId: string) {
 
     const image = await populateUser(Image.findById(imageId));
 
-    if(!image) throw new Error("Image not found");
+    if (!image) throw new Error("Image not found");
 
     return JSON.parse(JSON.stringify(image));
   } catch (error) {
