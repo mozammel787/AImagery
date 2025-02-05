@@ -145,8 +145,8 @@ const TransformationFrom = ({ action, data = null, userId, type, creditBalance, 
                     [fieldName === 'prompt' ? 'prompt' : 'to']: value
                 }
             }))
-            return onChangeField(value)
-        }, 1000);
+        }, 1000)();
+        return onChangeField(value)
     }
 
     // todo : update carate fee 
@@ -167,10 +167,10 @@ const TransformationFrom = ({ action, data = null, userId, type, creditBalance, 
     }
 
     useEffect(() => {
-        if(image && (type === 'restore' || type === 'removeBackground')) {
-          setNewTransformation(transformationType.config)
+        if (image && (type === 'restore' || type === 'removeBackground')) {
+            setNewTransformation(transformationType.config)
         }
-      }, [image, transformationType.config, type])
+    }, [image, transformationType.config, type])
 
     return (
         <Form {...form}>
@@ -193,8 +193,8 @@ const TransformationFrom = ({ action, data = null, userId, type, creditBalance, 
                         className="w-full"
                         render={({ field }) => (
                             <Select
-                                onValueChange={(value) =>
-                                    onSelectFieldHandler(value, field.onChange)}>
+                                onValueChange={(value) => onSelectFieldHandler(value, field.onChange)}
+                                value={field.value}>
                                 <SelectTrigger className="select-field">
                                     <SelectValue placeholder="Select Size" />
                                 </SelectTrigger>
@@ -221,9 +221,9 @@ const TransformationFrom = ({ action, data = null, userId, type, creditBalance, 
                                 type === 'remove' ? 'Object to remove ' : 'Object to recolor'
                             }
                             className="w-full"
-                            render={(({ field }) => (<Input value={field.value} className="input-field" onChange={(e) => onInputChangeHandler('prompt', e.target.value, type, field.onChange)} />
+                            render={({ field }) => (<Input value={field.value} className="input-field" onChange={(e) => onInputChangeHandler('prompt', e.target.value, type, field.onChange)} />
 
-                            ))} />
+                            )} />
                     </div>
                 )}
 
