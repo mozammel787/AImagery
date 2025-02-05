@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Sohne';
+  src: url('/fonts/TestSohneBreit-Regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lunema';
+  src: url('/fonts/lunema-regular.ttf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Apply the custom font to all heading tags */
+h1,
+h2,
+h3,
+h4{
+  @apply font-sohne;
+}
+
+h5,
+p,
+span,
+a ,
+label,
+input,
+button ,
+.transformed-placeholder,
+.cl-rootBox,
+.cl-userButtonPopoverMain{
+  @apply font-Lunema;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -110,7 +151,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[40px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -224,7 +265,7 @@
   }
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-semibold max-w-[550px] flex-wrap text-center text-white shadow-sm;
   }
 
   /* Credits Page */

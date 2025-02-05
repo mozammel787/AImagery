@@ -17,6 +17,11 @@ module.exports = {
 		},
 	  },
 	  extend: {
+		fontFamily: {
+			sohne: ['Sohne', 'sans-serif'],
+			satoshi: ['Satoshi', 'sans-serif'],
+			Lunema: ['lunema', 'sans-serif'],
+		  },
 		colors: {
 		  border: "hsl(var(--border))",
 		  input: "hsl(var(--input))",
@@ -64,9 +69,6 @@ module.exports = {
 			DEFAULT: "hsl(var(--card))",
 			foreground: "hsl(var(--card-foreground))",
 		  },
-		},
-		fontFamily: {
-		  IBMPlex: ["var(--font-ibm-plex)"],
 		},
 		backgroundImage: {
 		  "purple-gradient": "url('/assets/images/gradient-bg.svg')",
