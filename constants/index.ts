@@ -6,12 +6,12 @@ export const navLinks = [
     },
     {
       label: "Image Restore",
-      route: "/transformations/add/restore",
+      route: "transformations/add/restore",
       icon: "/assets/icons/image.svg",
     },
     {
       label: "Generative Fill",
-      route: "/transformations/add/fill",
+      route: "transformations/add/fill",
       icon: "/assets/icons/stars.svg",
     },
     {
