@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AImagery
 
-## Getting Started
+AImagery is an AI-powered image generation and transformation web application built with **Next.js**. It allows users to enhance, edit, and transform images using state-of-the-art AI features like restoration, background removal, generative fill, object removal, and recoloring — all powered by a **credit-based system**.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+
+- ✨ **Image Restoration** – Enhance and restore old or damaged photos
+- 🔍 **Background Removal** – Remove image backgrounds using AI
+- 🧠 **Generative Fill** – Fill in missing parts of images with AI
+- ❌ **Object Removal** – Eliminate unwanted objects from images
+- 🎨 **Object Recoloring** – Change colors of specific image elements
+- 🔐 **User Authentication** – Secure account management with Clerk
+- 💳 **Credit System** – Usage-based features via credit pricing plans
+- 📱 **Responsive Design** – Optimized for mobile, tablet, and desktop
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend**: Next.js 14.1.0, React 18, Tailwind CSS
+- **Authentication**: [Clerk](https://clerk.dev)
+- **Database**: MongoDB, Mongoose
+- **Image Processing**: [Cloudinary](https://cloudinary.com/)
+- **Payments**: Stripe
+- **Forms & Validation**: React Hook Form, Zod
+- **UI**: Radix UI
+
+---
+
+## 📦 Project Structure
+
+AImagery/
+├── app/ # Next.js App Router
+├── assets/ # Static assets
+├── components/ # UI components
+├── constants/ # App-wide constants
+├── lib/
+│ ├── actions/ # Server actions
+│ └── database/ # MongoDB models & connection
+└── public/ # Static files (e.g. favicons)
+
+yaml
+Copy
+Edit
+
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+- Node.js **v18+**
+- MongoDB account
+- Cloudinary account
+- Stripe account
+- Clerk account
+
+---
+
+### 🔐 Environment Variables
+
+Create a `.env.local` file in your root directory and add:
+
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+# Clerk Webhook
+WEBHOOK_SECRET=your_webhook_secret
+
+# MongoDB
+MONGODB_URI=your_mongodb_connection_string
+
+# Cloudinary
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+# Stripe
+STRIPE_SECRET_KEY=your_stripe_secret_key
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+
+# Server URL
+NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+🛠 Installation
+Clone the repo and install dependencies:
+
+bash
+Copy
+Edit
+git clone https://github.com/mozammel787/AImagery.git
+cd AImagery
+
+# Install dependencies
+npm install
+# or
+yarn install
+▶️ Run Locally
+bash
+Copy
+Edit
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to see it in action.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎯 Transformation Types
+Restore Image: Enhance image quality
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Background Remove: Isolate subject by removing background
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Generative Fill: Reconstruct image portions with AI
 
-## Learn More
+Object Remove: Remove selected objects
 
-To learn more about Next.js, take a look at the following resources:
+Object Recolor: Recolor parts of the image intelligently
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+💰 Credit System
+AImagery uses a credit-based model:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Plan	Credits	Price
+Free Plan	20	Free
+Pro Package	120	$40
+Premium Package	2000	$199
 
-## Deploy on Vercel
+Each transformation consumes 1 credit.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🚀 Deployment
+You can deploy this app easily using Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📄 License
+MIT License
+
+🙏 Acknowledgements
+Next.js
+
+Clerk
+
+Cloudinary
+
+MongoDB
+
+Stripe
+
+Tailwind CSS
+
+Radix UI
