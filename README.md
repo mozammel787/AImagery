@@ -3,6 +3,9 @@
 AImagery is an AI-powered image generation and transformation web application built with **Next.js**. It allows users to enhance, edit, and transform images using state-of-the-art AI features like restoration, background removal, generative fill, object removal, and recoloring — all powered by a **credit-based system**.
 
 ---
+## 🔗 Live Demo
+
+👉 [Visit AImagery Live](https://ai-magery.vercel.app/)
 
 ## 🚀 Features
 
@@ -86,7 +89,7 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 ```
 
-🧑‍💻 Installation
+### 🧑‍💻 Installation
 Clone the repository:
 
 git clone https://github.com/mozammel787/AImagery.git
@@ -101,7 +104,7 @@ npm run dev
 yarn dev
 Open http://localhost:3000 to view the app in your browser.
 
-🎯 Transformation Types
+### 🎯 Transformation Types
 AImagery offers five main AI-powered transformation tools:
 
 Restore Image – Enhance and restore old or damaged images
@@ -114,8 +117,7 @@ Object Remove – Eliminate unwanted objects
 
 Object Recolor – Change the color of specific objects
 
-💰 Credit System
-💳 Credit System
+### 💳 Credit System
 Each image transformation consumes credits. Users can choose from different pricing plans:
 
 | Plan Name    | Credits | Price |
@@ -127,13 +129,13 @@ Each image transformation consumes credits. Users can choose from different pric
 
 Each transformation consumes 1 credit.
 
-🚢 Deployment
+### 🚢 Deployment
 The easiest way to deploy AImagery is to use Vercel, the creators of Next.js. Just connect your GitHub repository and set your environment variables.
 
-📄 License
+### 📄 License
 This project is licensed under the MIT License.
 
-🙏 Acknowledgements
+### 🙏 Acknowledgements
 Next.js
 
 Clerk
