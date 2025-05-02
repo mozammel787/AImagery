@@ -33,7 +33,7 @@ AImagery is an AI-powered image generation and transformation web application bu
 ---
 
 ## 📦 Project Structure
-
+```
 AImagery/
 ├── app/                    # Next.js App Router structure
 ├── assets/                 # Static assets
@@ -44,7 +44,7 @@ AImagery/
 │   └── database/           # Database models and connection
 └── public/                 # Public static files
 
-
+```
 ---
 
 ## ⚙️ Getting Started
