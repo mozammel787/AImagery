@@ -32,18 +32,15 @@ AImagery is an AI-powered image generation and transformation web application bu
 ## 📦 Project Structure
 
 AImagery/
-├── app/ # Next.js App Router
-├── assets/ # Static assets
-├── components/ # UI components
-├── constants/ # App-wide constants
-├── lib/
-│ ├── actions/ # Server actions
-│ └── database/ # MongoDB models & connection
-└── public/ # Static files (e.g. favicons)
+├── app/                    # Next.js App Router structure
+├── assets/                 # Static assets
+├── components/             # React components
+├── constants/              # Application constants
+├── lib/                    # Utility functions and server actions
+│   ├── actions/            # Server actions
+│   └── database/           # Database models and connection
+└── public/                 # Public static files
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -97,12 +94,10 @@ cd AImagery
 Install dependencies:
 
 npm install
-# or
 yarn install
 Run the development server:
 
 npm run dev
-# or
 yarn dev
 Open http://localhost:3000 to view the app in your browser.
 
