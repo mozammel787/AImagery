@@ -72,6 +72,7 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
+
 # Clerk Webhook
 WEBHOOK_SECRET=your_webhook_secret
 
@@ -86,57 +87,56 @@ CLOUDINARY_API_SECRET=your_api_secret
 # Stripe
 STRIPE_SECRET_KEY=your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+```
 
-# Server URL
-NEXT_PUBLIC_SERVER_URL=http://localhost:3000
-🛠 Installation
-Clone the repo and install dependencies:
+🧑‍💻 Installation
+Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/mozammel787/AImagery.git
 cd AImagery
+Install dependencies:
 
-# Install dependencies
 npm install
 # or
 yarn install
-▶️ Run Locally
-bash
-Copy
-Edit
+Run the development server:
+
 npm run dev
 # or
 yarn dev
-Visit http://localhost:3000 to see it in action.
+Open http://localhost:3000 to view the app in your browser.
 
 🎯 Transformation Types
-Restore Image: Enhance image quality
+AImagery offers five main AI-powered transformation tools:
 
-Background Remove: Isolate subject by removing background
+Restore Image – Enhance and restore old or damaged images
 
-Generative Fill: Reconstruct image portions with AI
+Background Remove – Remove image backgrounds
 
-Object Remove: Remove selected objects
+Generative Fill – Fill in missing or blank areas
 
-Object Recolor: Recolor parts of the image intelligently
+Object Remove – Eliminate unwanted objects
+
+Object Recolor – Change the color of specific objects
 
 💰 Credit System
-AImagery uses a credit-based model:
+💳 Credit System
+Each image transformation consumes credits. Users can choose from different pricing plans:
 
-Plan	Credits	Price
-Free Plan	20	Free
-Pro Package	120	$40
-Premium Package	2000	$199
+| Plan Name    | Credits | Price |
+| ------------ | ------- | ----- |
+| Free Plan    | 10      | Free  |
+| Pro Package  | 120     | \$40  |
+| Premium Plan | 2000    | \$199 |
+
 
 Each transformation consumes 1 credit.
 
-🚀 Deployment
-You can deploy this app easily using Vercel.
+🚢 Deployment
+The easiest way to deploy AImagery is to use Vercel, the creators of Next.js. Just connect your GitHub repository and set your environment variables.
 
 📄 License
-MIT License
+This project is licensed under the MIT License.
 
 🙏 Acknowledgements
 Next.js
@@ -152,3 +152,9 @@ Stripe
 Tailwind CSS
 
 Radix UI
+
+
+---
+
+Let me know if you’d like a version with badges, screenshots, or documentation links added.
+
